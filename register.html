@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - ExploreKPK</title>
+
+    <!-- Connect CSS File -->
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>ExploreKPK</h1>
+        <p>Discover the Beauty of Khyber Pakhtunkhwa</p>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="Explore%20kpk%20project.html">Home</a>
+            <a href="media.html">Media &amp; Information</a>
+            <a href="register.html">Register</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <main>
+        <h2>Register for Your KPK Adventure</h2>
+
+        <p>
+            Plan your next adventure and explore the beautiful
+            destinations of Khyber Pakhtunkhwa.
+        </p>
+
+        <form action="#" method="post">
+
+            <label for="name">Full Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="email">Email Address:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="phone">Phone Number:</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+            <label for="destination">Choose Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="">Select a destination</option>
+                <option value="Swat">Swat</option>
+                <option value="Chitral">Chitral</option>
+                <option value="Kumrat">Upper Dir</option>
+                <option value="Hunza">Kumrat Valley</option>
+                <option value="Naran">Naran Kaghan</option>
+            </select>
+
+            <label for="date">Preferred Travel Date:</label>
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+
+            <label for="people">Number of Visitors:</label>
+            <input
+                type="number"
+                id="people"
+                name="people"
+                min="1"
+                max="20"
+                value="1"
+                required
+            >
+
+            <label for="message">Additional Information:</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell us about your travel plans"
+            ></textarea>
+
+            <button type="submit">Register Now</button>
+
+        </form>
+    </main>
+
+    <!-- Website Footer -->
+    <footer>
+        <p>&copy; 2026 ExploreKPK | Explore Nature, Discover Adventure</p>
+    </footer>
+
+</body>
+</html>

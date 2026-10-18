@@ -1,0 +1,133 @@
+
+/* ExploreKPK Registration Page CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f7f4;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #14532d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px;
+    font-size: 32px;
+}
+
+/* Navigation */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    margin: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* Registration Form Container */
+main {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+main h2 {
+    text-align: center;
+    color: #14532d;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #16a34a;
+    border-color: #16a34a;
+}
+
+/* Register Button */
+button {
+    padding: 13px;
+    margin-top: 12px;
+    background-color: #14532d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #166534;
+}
+
+/* Footer (if added to HTML) */
+footer {
+    background-color: #14532d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    main {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+}
