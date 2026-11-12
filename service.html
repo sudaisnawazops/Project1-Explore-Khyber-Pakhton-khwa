@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ExploreKPK</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Complete Professional CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7f2;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #123c2b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f2d18b;
+        }
+
+        .logo span {
+            color: #ffffff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background-color: #14532d;
+            color: #f2d18b;
+        }
+
+        /* Hero Section with Stunning Mountain / Snow / Autumn Background */
+        .services-hero {
+            background: linear-gradient(rgba(18, 60, 43, 0.78), rgba(11, 38, 27, 0.85)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.4rem;
+            color: #fef08a; /* Brighter, glowing yellow for high visibility */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .author-tag {
+            font-size: 1rem;
+            color: #f2d18b;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 0 auto;
+            color: #f1f5f9; /* Bright clear white/light gray */
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Services Container */
+        .services-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            color: #123c2b;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        /* Flexbox Requirements */
+        .cards-grid-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 2.5rem;
+        }
+
+        /* Service Card */
+        .service-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 350px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .emergency-highlight {
+            border: 2px solid #f2d18b;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(18, 60, 43, 0.22);
+        }
+
+        .card-header-box {
+            height: 150px;
+            background-color: #123c2b;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            color: #fef08a;
+            font-size: 1.25rem;
+            font-weight: 700;
+            position: relative;
+            border-bottom: 3px solid #f2d18b;
+        }
+
+        .card-header-box::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            z-index: 1;
+        }
+
+        .card-header-box span {
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .card-content {
+            padding: 1.8rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.3rem;
+            color: #123c2b;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background-color: #123c2b;
+            color: #f2d18b;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #14532d;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background-color: #123c2b;
+            color: #fff;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .why-us h2 {
+            color: #fef08a;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(242, 209, 139, 0.3);
+            padding: 2.2rem;
+            border-radius: 10px;
+            width: 320px;
+        }
+
+        .feature-item h3 {
+            color: #fef08a;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b261b;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 1.8rem;
+            font-size: 0.92rem;
+            margin-top: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .cards-grid-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Explore<span>KPK</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="service.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Services Hero Section with Stunning KPK Mountain / Snow / Autumn Background -->
+    <section class="services-hero">
+        <div class="hero-content">
+            <h1>Our Tourism & Specialized Services</h1>
+            <p class="author-tag">Created by Sudais Nawaz</p>
+            <p>Discover the breathtaking valleys, snow-capped peaks, and vibrant autumn trails of KPK with complete peace of mind, backed by professional tour packages and 24/7 medical rescue support.</p>
+        </div>
+    </section>
+
+    <!-- Services Cards Container using Flexbox -->
+    <main class="services-container">
+        <h2 class="section-title">Explore KPK Travel Packages & Care Services</h2>
+        
+        <div class="cards-grid-flex">
+            
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="card-header-box" style="background-image: url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=600&auto=format&fit=crop');">
+                    <span>Kumrat Valley Tour</span>
+                </div>
+                <div class="card-content">
+                    <h3>Kumrat Valley Adventure</h3>
+                    <p>Experience the lush green forests, mighty Panjkora river, and majestic towering Deodar trees with our exclusive 3-day camping and valley tour.</p>
+                    <a href="contact.html" class="card-btn">Book Package</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="card-header-box" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop');">
+                    <span>Chitral & Lowari Pass</span>
+                </div>
+                <div class="card-content">
+                    <h3>Chitral & Lowari Tunnel Pass</h3>
+                    <p>Journey through the historic Lowari Tunnel (approx. 8.5 km long) leading to mesmerizing valleys, Kalash culture, and majestic Tirich Mir views.</p>
+                    <a href="contact.html" class="card-btn">Book Package</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card emergency-highlight">
+                <div class="card-header-box" style="background-image: url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600&auto=format&fit=crop');">
+                    <span>Emergency Medical Care</span>
+                </div>
+                <div class="card-content">
+                    <h3>Emergency Medical & Safety Care</h3>
+                    <p>Travel safely with our on-trip medical kits, instant first aid for altitude sickness/injuries, emergency medicine provision, and safe return transport back.</p>
+                    <a href="contact.html" class="card-btn">Emergency Support</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card">
+                <div class="card-header-box" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop');">
+                    <span>Swat Valley Holiday</span>
+                </div>
+                <div class="card-content">
+                    <h3>Swat - The Switzerland of Pakistan</h3>
+                    <p>Enjoy guided tours to Malam Jabba ski resort, Mahodand Lake, and historical Buddhist heritage sites with premium hotel accommodation assistance.</p>
+                    <a href="contact.html" class="card-btn">Book Package</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="service-card">
+                <div class="card-header-box" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600&auto=format&fit=crop');">
+                    <span>Upper Dir Trekking</span>
+                </div>
+                <div class="card-content">
+                    <h3>Upper Dir Hiking & Camping</h3>
+                    <p>Immersive hiking and professional trekking experiences across pristine mountain trails with complete equipment and safety guides.</p>
+                    <a href="contact.html" class="card-btn">Book Package</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="service-card">
+                <div class="card-header-box" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=600&auto=format&fit=crop');">
+                    <span>Mountain Transport</span>
+                </div>
+                <div class="card-content">
+                    <h3>Safe Mountain Transportation</h3>
+                    <p>Reliable 4x4 jeeps and comfortable air-conditioned coasters designed for safe travel through winding mountain passes and rough terrains.</p>
+                    <a href="contact.html" class="card-btn">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <h2>Why Travel With ExploreKPK?</h2>
+        <div class="features-list">
+            <div class="feature-item">
+                <h3>Expert Local Guides</h3>
+                <p>Born and raised locals who know every hidden trail, culture, and safety protocol of KPK.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Affordable Packages</h3>
+                <p>Student and family-friendly budget plans with zero hidden costs and maximum comfort.</p>
+            </div>
+            <div class="feature-item">
+                <h3>24/7 Medical & Rescue</h3>
+                <p>Instant first aid kits, emergency medicine supply, and secure transport back home if anyone falls ill.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 ExploreKPK. Developed for Web Technologies Project 1 | University of Central Punjab (UCP).</p>
+    </footer>
+
+</body>
+</html>

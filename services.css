@@ -1,0 +1,273 @@
+/* --- Global Styles & Brand Identity --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f7f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+header {
+    background-color: #123c2b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f2d18b;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #14532d;
+    color: #f2d18b;
+}
+
+/* --- Hero Section --- */
+.services-hero {
+    background: linear-gradient(rgba(18, 60, 43, 0.88), rgba(20, 83, 45, 0.88)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #f2d18b;
+}
+
+.author-tag {
+    font-size: 0.95rem;
+    color: #f2d18b;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e2e8f0;
+}
+
+/* --- Services Container (Flexbox Requirements) --- */
+.services-container {
+    max-width: 1200px;
+    margin: 3.5rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #123c2b;
+    margin-bottom: 2.5rem;
+}
+
+/* Flexbox Grid Layout */
+.cards-grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2.5rem;
+}
+
+/* Individual Service Card */
+.service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.emergency-highlight {
+    border: 2px solid #f2d18b;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(18, 60, 43, 0.2);
+}
+
+/* Card Header Backgrounds with Stunning Mountain Gradients */
+.card-img-bg {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    position: relative;
+}
+
+.card-img-bg::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.card-img-bg h3 {
+    position: relative;
+    z-index: 2;
+    color: #f2d18b;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Card Background Images */
+.img-kumrat { background-image: url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=800&auto=format&fit=crop'); }
+.img-chitral { background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop'); }
+.img-medical { background-image: url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop'); }
+.img-swat { background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop'); }
+.img-dir { background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop'); }
+.img-transport { background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop'); }
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    color: #123c2b;
+    margin-bottom: 0.6rem;
+}
+
+.card-content p {
+    font-size: 0.92rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+.card-btn {
+    display: inline-block;
+    background-color: #123c2b;
+    color: #f2d18b;
+    padding: 0.55rem 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #14532d;
+}
+
+/* --- Why Choose Us Section --- */
+.why-us {
+    background-color: #123c2b;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.why-us h2 {
+    color: #f2d18b;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(242, 209, 139, 0.2);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.feature-item h3 {
+    color: #f2d18b;
+    margin-bottom: 0.8rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0b261b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* --- Responsive Media Query for Mobile --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cards-grid-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}

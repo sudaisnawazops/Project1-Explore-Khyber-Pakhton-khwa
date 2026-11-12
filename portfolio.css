@@ -1,0 +1,211 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f7f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+header {
+    background-color: #123c2b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f2d18b;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #14532d;
+    color: #f2d18b;
+}
+
+/* --- Portfolio Hero --- */
+.portfolio-hero {
+    background: linear-gradient(rgba(18, 60, 43, 0.85), rgba(20, 83, 45, 0.85)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #f2d18b;
+}
+
+/* Author tag styling */
+.author-tag {
+    font-size: 0.95rem;
+    color: #f2d18b;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+}
+
+/* --- Portfolio Container & CSS Grid --- */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #123c2b;
+    margin-bottom: 2.5rem;
+}
+
+/* CSS Grid Gallery Layout */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Gallery Card Items with Stunning Mountain Background Pictures */
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 320px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Specific Mountain Background Images for Each Card */
+.item-kumrat {
+    background-image: linear-gradient(to top, rgba(11, 38, 27, 0.95), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=800&auto=format&fit=crop');
+}
+.item-chitral {
+    background-image: linear-gradient(to top, rgba(11, 38, 27, 0.95), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop');
+}
+.item-swat {
+    background-image: linear-gradient(to top, rgba(11, 38, 27, 0.95), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop');
+}
+.item-dir {
+    background-image: linear-gradient(to top, rgba(11, 38, 27, 0.95), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop');
+}
+.item-culture {
+    background-image: linear-gradient(to top, rgba(11, 38, 27, 0.95), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop');
+}
+.item-sunset {
+    background-image: linear-gradient(to top, rgba(11, 38, 27, 0.95), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1495954484750-af469f2f9be5?q=80&w=800&auto=format&fit=crop');
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(18, 60, 43, 0.3);
+}
+
+/* Card Content / Caption Overlay */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.5rem 1.5rem;
+    color: #fff;
+}
+
+.card-content h3 {
+    color: #f2d18b;
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 0.92rem;
+    color: #e2e8f0;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0b261b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 1024px) {
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
